@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Run the specified command within the container.
-RUN npm start
+CMD [ "npm", "start"]

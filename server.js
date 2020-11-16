@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 app.use("/books", require("./routes/books"));
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 const options = {
   definition: {

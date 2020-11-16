@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: simpleCrud
     # need the env file for some reason
-    # env_file: .env
     ports:
       - "3000:3000"
