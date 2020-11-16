@@ -9,6 +9,3 @@ services:
     # env_file: .env
     ports:
       - "3000:3000"
-
-    # need this line or react-app scripts will crash and exit with 0
-    stdin_open: true
