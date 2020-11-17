@@ -50,13 +50,19 @@ hooks:
   # If you do not want to run any commands during a particular deployment
   #   lifecycle event, remove that event declaration altogether. Blank or
   #   incomplete event declarations may cause associated deployments to fail.
+  AfterInstall:
+    - location: scripts/start_docker.sh
+      timeout: 180
+      runas: ec2-user
+
   # During the ApplicationStop deployment lifecycle event, run the commands
   #   in the script specified in "location" starting from the root of the
   #   revision's file bundle.
   ApplicationStop:
     - location: scripts/kill_container.sh
       timeout: 10
-      runas: ec2-user
+      runas: ec2-
+
   # During the AfterInstall deployment lifecycle event, run the commands
   #   in the script specified in "location".
 

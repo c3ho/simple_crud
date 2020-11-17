@@ -2,4 +2,4 @@
 
 set -e
 
-docker-compose up
+sudo service docker start
