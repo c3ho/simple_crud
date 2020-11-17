@@ -50,7 +50,7 @@ hooks:
   # If you do not want to run any commands during a particular deployment
   #   lifecycle event, remove that event declaration altogether. Blank or
   #   incomplete event declarations may cause associated deployments to fail.
-  AfterInstall:
+  BeforeInstall:
     - location: ./scripts/start_docker.sh
       timeout: 10
       runas: root
@@ -64,3 +64,7 @@ hooks:
 
   # During the ApplicationStart deployment lifecycle event, run the commands
   #   in the script specified in "location".
+  ApplicationStart:
+    - location: ./scripts/start_container.sh
+      timeout: 10
+      runas: root
