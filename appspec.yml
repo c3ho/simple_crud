@@ -51,7 +51,7 @@ hooks:
   #   lifecycle event, remove that event declaration altogether. Blank or
   #   incomplete event declarations may cause associated deployments to fail.
   AfterInstall:
-    - location: scripts/start_docker.sh
+    - location: ./scripts/start_docker.sh
       timeout: 10
       runas: ec2-user
 
@@ -59,7 +59,7 @@ hooks:
   #   in the script specified in "location" starting from the root of the
   #   revision's file bundle.
   ApplicationStop:
-    - location: scripts/kill_container.sh
+    - location: ./scripts/kill_container.sh
       timeout: 10
       runas: ec2-user
 
@@ -69,6 +69,6 @@ hooks:
   # During the ApplicationStart deployment lifecycle event, run the commands
   #   in the script specified in "location".
   ApplicationStart:
-    - location: scripts/start_container.sh
+    - location: ./scripts/start_container.sh
       timeout: 10
       runas: ec2-user
