@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-set -e
-
-docker-compose up
+docker-compose up -d

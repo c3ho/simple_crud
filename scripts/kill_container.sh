@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 set -e
 
-docker rm -f simpleCrud || true
+docker-compose down
