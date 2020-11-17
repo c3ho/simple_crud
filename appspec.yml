@@ -23,7 +23,7 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: /
+  - source: .
     destination: ./test
 
 # If you are not running any commands on the Amazon EC2 instance, then remove
@@ -60,7 +60,7 @@ hooks:
   #   revision's file bundle.
   ApplicationStop:
     - location: ./test/scripts/kill_container.sh
-      timeout: 180
+      timeout: 10
       runas: ec2-user
 
   # During the AfterInstall deployment lifecycle event, run the commands
