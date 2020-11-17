@@ -58,9 +58,17 @@ hooks:
   # During the ApplicationStop deployment lifecycle event, run the commands
   #   in the script specified in "location" starting from the root of the
   #   revision's file bundle.
+  ApplicationStop:
+    - location: ./scripts/kill_container.sh
+      timeout: 20
+      runas: root
 
   # During the AfterInstall deployment lifecycle event, run the commands
   #   in the script specified in "location".
 
   # During the ApplicationStart deployment lifecycle event, run the commands
   #   in the script specified in "location".
+  ApplicationStart:
+    - location: ./scripts/start_container.sh
+      timeout: 20
+      runas: root
