@@ -61,7 +61,7 @@ hooks:
   ApplicationStop:
     - location: scripts/kill_container.sh
       timeout: 10
-      runas: ec2-
+      runas: ec2-user
 
   # During the AfterInstall deployment lifecycle event, run the commands
   #   in the script specified in "location".
