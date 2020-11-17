@@ -52,14 +52,14 @@ hooks:
   #   incomplete event declarations may cause associated deployments to fail.
   AfterInstall:
     - location: ./test/scripts/start_docker.sh
-      timeout: 10
+      timeout: 30
       runas: ec2-user
 
   # During the ApplicationStop deployment lifecycle event, run the commands
   #   in the script specified in "location" starting from the root of the
   #   revision's file bundle.
   ApplicationStop:
-    - location: ./test/scripts/start_container.sh
+    - location: ./test/scripts/kill_container.sh
       timeout: 10
       runas: ec2-user
 
