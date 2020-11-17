@@ -23,7 +23,7 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: .
+  - source: /
     destination: ./test
 
 # If you are not running any commands on the Amazon EC2 instance, then remove
@@ -52,7 +52,7 @@ hooks:
   #   incomplete event declarations may cause associated deployments to fail.
   AfterInstall:
     - location: ./scripts/start_docker.sh
-      timeout: 180
+      timeout: 10
       runas: ec2-user
 
   # During the ApplicationStop deployment lifecycle event, run the commands
@@ -70,5 +70,5 @@ hooks:
   #   in the script specified in "location".
   ApplicationStart:
     - location: ./scripts/start_container.sh
-      timeout: 180
+      timeout: 10
       runas: ec2-user
