@@ -52,7 +52,7 @@ hooks:
   #   incomplete event declarations may cause associated deployments to fail.
   AfterInstall:
     - location: ./scripts/start_docker.sh
-      timeout: 15
+      timeout: 10
       runas: root
 
   # During the ApplicationStop deployment lifecycle event, run the commands
