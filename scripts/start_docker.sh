@@ -2,4 +2,4 @@
 
 set -e
 
-sudo service docker start
+service docker start

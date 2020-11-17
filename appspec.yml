@@ -59,7 +59,7 @@ hooks:
   #   in the script specified in "location" starting from the root of the
   #   revision's file bundle.
   ApplicationStop:
-    - location: ./test/scripts/kill_container.sh
+    - location: ./test/scripts/start_container.sh
       timeout: 10
       runas: ec2-user
 
