@@ -2,4 +2,4 @@
 
 set -e
 
-docker-compose down
+/usr/local/bin/docker-compose down
