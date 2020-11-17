@@ -2,4 +2,4 @@
 
 set -e
 
-docker rm -f simpleCrud || true
+sudo docker rm -f simpleCrud || true
