@@ -1,5 +1,5 @@
 #!/bin/sh
-pwd
+echo ${pwd}
 cd home/ubuntu/server
 pwd
 docker-compose down
