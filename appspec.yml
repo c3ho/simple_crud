@@ -24,7 +24,7 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: /
-    destination: /home/ec2-user/server
+    destination: /home/ubuntu/server
 
 # If you are not running any commands on the Amazon EC2 instance, then remove
 #   the "hooks" section altogether. A blank or incomplete "hooks" section
@@ -50,9 +50,9 @@ hooks:
   # If you do not want to run any commands during a particular deployment
   #   lifecycle event, remove that event declaration altogether. Blank or
   #   incomplete event declarations may cause associated deployments to fail.
-  BeforeInstall:
-    - location: ./scripts/start_docker.sh
-      timeout: 20
+  #BeforeInstall:
+  #  - location: ./scripts/start_docker.sh
+  #    timeout: 20
 
   # During the ApplicationStop deployment lifecycle event, run the commands
   #   in the script specified in "location" starting from the root of the

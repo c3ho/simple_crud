@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd home/ec2-user/server
+cd home/ubuntu/server
 
 docker-compose down
