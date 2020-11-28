@@ -7,6 +7,6 @@ sudo service docker start
 sudo usermod -a -G docker ec2-user
 
 sudo service docker start
-cd home/ubuntu/server
+cd home/ec2-user/server
 
 docker-compose up -d
