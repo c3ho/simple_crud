@@ -25,7 +25,7 @@ os: linux
 files:
   - source: /
     # remember to change ubuntu back to ec2-user
-    destination: /var/www/server
+    destination: /home/ubuntu/server
 
 # If you are not running any commands on the Amazon EC2 instance, then remove
 #   the "hooks" section altogether. A blank or incomplete "hooks" section
@@ -59,7 +59,7 @@ hooks:
   #   in the script specified in "location" starting from the root of the
   #   revision's file bundle.
   ApplicationStop:
-    - location: ./shScripts/kill_container.sh
+    - location: ./scripts/kill_container.sh
       timeout: 20
       runas: root
 
@@ -69,6 +69,6 @@ hooks:
   # During the ApplicationStart deployment lifecycle event, run the commands
   #   in the script specified in "location".
   ApplicationStart:
-    - location: ./shScripts/start_container.sh
+    - location: ./scripts/start_container.sh
       timeout: 20
       runas: root
